@@ -23,7 +23,6 @@ const loop = setInterval(() => {
     mario.style.bottom = `${marioPosition}px`;
 
     mario.src = "./images/game-over-mario.png";
-    mario.style.width = "100px";
 
     clearInterval(loop);
   }
