@@ -10,6 +10,18 @@ const jump = () => {
   }, 500);
 };
 
+const gameOver = () => {
+  clearInterval(loop);
+  const restart = confirm("Game Over! Do you want to restart the game?");
+  if (restart) {
+    location.reload();
+  }
+};
+const resetAnimations = () => {
+  pipe.style.animation = "";
+  mario.style.animation = "";
+};
+
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
   const marioPosition = +window
@@ -25,6 +37,9 @@ const loop = setInterval(() => {
     mario.src = "./images/game-over-mario.png";
 
     clearInterval(loop);
+    setTimeout(() => {
+      gameOver();
+    }, 2000);
   }
 }, 10);
 
