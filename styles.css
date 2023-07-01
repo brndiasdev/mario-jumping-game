@@ -62,7 +62,7 @@
   width: 60px;
   height: 75px;
   object-fit: fill;
-  animation: pipe-animation 3s infinite linear;
+  animation: pipe-animation 1.5s infinite linear;
 }
 
 .mainMario {
